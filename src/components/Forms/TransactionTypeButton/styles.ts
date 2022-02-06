@@ -33,7 +33,7 @@ export const Container = styled(TouchableOpacity)<ContainerProps>`
   ${({ isActive, type }) => isActive && type === "down" && css`
     background-color: ${({ theme }) => theme.colors.attention_light}
   `}
-
+  
 `;
 
 export const Icon = styled(Feather)<IconProps>`

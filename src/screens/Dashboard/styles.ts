@@ -1,8 +1,9 @@
 import { Feather } from "@expo/vector-icons";
-import { FlatList, FlatListProps } from "react-native";
+import { FlatList, FlatListProps, TouchableOpacity } from "react-native";
 import { getBottomSpace, getStatusBarHeight } from "react-native-iphone-x-helper";
 import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
 import styled from "styled-components/native";
+
 import { DataListProps } from ".";
 
 export const Container = styled.View`
@@ -62,6 +63,8 @@ export const UserName = styled.Text`
   font-family: ${({ theme }) => theme.fonts.bold};
 `;
 
+export const LogoutButton = styled(TouchableOpacity)``;
+
 export const Icon = styled(Feather)`
   color: ${({ theme }) => theme.colors.secondary};
   font-size: ${RFValue(24)}px;
@@ -102,3 +105,7 @@ export const TransactionList = styled(
     paddingBottom: getBottomSpace(),
   },
 })``;
+
+function OpacityTouchable(OpacityTouchable: any) {
+  throw new Error("Function not implemented.");
+}
