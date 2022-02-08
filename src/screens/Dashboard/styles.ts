@@ -107,6 +107,8 @@ export const TransactionList = styled(
   },
 })``;
 
-function OpacityTouchable(OpacityTouchable: any) {
-  throw new Error("Function not implemented.");
-}
+export const LoadContainer = styled.View`
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+`;
