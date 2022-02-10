@@ -2,31 +2,21 @@ import React from "react";
 import { RectButtonProps } from "react-native-gesture-handler";
 import { SvgProps } from "react-native-svg";
 
-import {
-  Button,
-  ImageContainer,
-  Text
-} from "./styles";
+import { Button, ImageContainer, Text } from "./styles";
 
 interface Props extends RectButtonProps {
   title: string;
-  svg: React.FC<SvgProps>
+  svg: React.FC<SvgProps>;
 }
 
-export function SignInSocialButton({
-  title,
-  svg: Svg,
-  ...rest
-}: Props) {
+export function SignInSocialButton({ title, svg: Svg, ...rest }: Props) {
   return (
-    <Button>
+    <Button {...rest}>
       <ImageContainer>
         <Svg />
       </ImageContainer>
 
-      <Text>
-        {title}
-      </Text>
+      <Text>{title}</Text>
     </Button>
   );
 }
